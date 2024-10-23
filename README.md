@@ -1,23 +1,23 @@
-Mastering Trace Analysis with Span Links using openTelemetry and Signoz (A Practical Guide)
+## Mastering Trace Analysis with Span Links using openTelemetry and Signoz (A Practical Guide)
 
-Overview
+### Overview
 
 This repository provides a complete guide and code example for understanding and implementing span links with OpenTelemetry and visualizing them using SigNoz. 
-Span links allow you to connect related spans across different traces, making it easier to analyze complex service interactions, especially in distributed systems.
+Span links allow you to connect related spans across different traces, making it easier to analyze complex service interactions, especially in distributed systems. 
 
-In this tutorial, you'll learn:
+### In this tutorial, you'll learn:
 
 1. How to set up OpenTelemetry instrumentation in Python.
 2. How to create and link spans between services.
 3. How to configure SigNoz for monitoring and trace visualization.
 4. How to interpret trace graphs using span links to gain insights into service dependencies.
 
-Prerequisites
-Python 3.7+
-Docker (for running SigNoz)
-Basic knowledge of microservices and distributed tracing concepts
-
-Getting Started
+### Prerequisites
+- Python 3.7+
+- Docker (for running SigNoz)
+- Basic knowledge of microservices and distributed tracing concepts
+      
+### Getting Started
 
 ```bash
 # Clone the repository
