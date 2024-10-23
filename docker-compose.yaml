@@ -1,0 +1,25 @@
+version: '3'
+services:
+  signoz:
+    image: signoz/signoz:latest
+    ports:
+      - "3301:3301" # Frontend UI
+      - "4317:4317" # OTLP receiver port
+      - "4318:4318" # OTLP HTTP receiver
+      - "8080:8080" # Backend server
+    environment:
+      - CLICKHOUSE_DB_HOST=clickhouse
+      - QUERY_SERVICE=signoz-query-service:8080
+    depends_on:
+      - clickhouse
+
+  clickhouse:
+    image: yandex/clickhouse-server:latest
+    ports:
+      - "8123:8123"
+      - "9000:9000"
+
+  kafka:
+    image: confluentinc/cp-kafka:5.5.0
+    ports:
+      - "9092:9092"
